@@ -23,6 +23,8 @@ for i in 1 2 3 4 5 6 7 8 9; do
   if [ -f $APKP-$i.apk ]; then
     APK=$APKP-$i.apk
     break
+  elif [ -d $APKP-$i ]; then
+    APK=$APKP-$i/base.apk
   fi
 done
 
